@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AirPods 5 — Apple India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/refined.css" />
+  <style>
+    /* Homepage-specific overrides (sections defined in assets/styles.css) */
+    section.hero { background: var(--black); color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding: 100px 20px 80px; }
+    .hero-art { position: relative; z-index: 2; width: min(520px, 70vw); margin: 0 auto; filter: drop-shadow(0 20px 50px rgba(0,0,0,.4)); transition: transform 0.1s ease-out; }
+    .hero .title { font-size: clamp(48px, 8vw, 88px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; margin: 0 0 12px; }
+    .hero .sub { font-size: clamp(18px, 2.6vw, 28px); font-weight: 500; color: var(--gray-300); margin: 0 0 32px; }
+    .hero .cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero .cta .btn { padding: 14px 28px; font-size: 17px; }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal sticky header -->
+  <nav class="site-nav" aria-label="Main">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-brand">AirPods <span>5</span></a>
+      <div class="nav-links">
+        <a href="airpods-5.html">AirPods 5</a>
+        <a href="airpods-5-wireless.html">Wireless</a>
+        <a href="compare.html">Compare</a>
+        <a href="https://www.apple.com/in/shop/buy-airpods/airpods-5/without-wireless-charging-case" target="_blank" rel="noopener" class="btn-link">Buy</a>
+      </div>
+      <button id="navToggle" aria-controls="mobileMenu" aria-expanded="false" class="nav-toggle" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <a href="airpods-5.html">AirPods 5</a>
+    <a href="airpods-5-wireless.html">Wireless Charging Case</a>
+    <a href="compare.html">Compare Models</a>
+    <a href="https://www.apple.com/in/shop/buy-airpods/airpods-5/without-wireless-charging-case" target="_blank" rel="noopener">Buy from Apple India</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero homepage-hero" data-motion-hero>
+    <div class="hero-copy">
+      <span class="eyebrow" style="color:var(--gray-400);display:block;margin-bottom:8px">New</span>
+      <h1 class="title" data-motion-copy>AirPods&nbsp;5</h1>
+      <p class="sub" data-motion-copy>Active Noise Cancellation, now built&nbsp;in.</p>
+      <div class="cta" data-motion-copy>
+        <a href="#models" class="btn btn-ghost">Explore AirPods 5</a>
+        <a href="#models" class="btn btn-blue">Choose a model</a>
+      </div>
+    </div>
+    <img class="hero-art homepage-hero-media" src="assets/images/airpods-5-concept-hero.jpg" alt="AirPods 5 with charging case" data-motion-hero-art draggable="false" />
+  </section>
+
+  <!-- ============ MODEL SELECTION ============ -->
+  <section class="model-section section" id="models">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Models</span>
+        <h2 style="font-size:clamp(28px,4.6vw,48px);letter-spacing:-.03em;font-weight:700;margin-top:10px">Choose your AirPods&nbsp;5</h2>
+        <p style="margin-top:14px;color:var(--gray-400);font-size:17px">Same sound. Same chip. Pick your charging style.</p>
+      </div>
+      <div class="model-grid">
+        <a href="airpods-5.html" class="model-panel reveal">
+          <img class="product-thumb" src="assets/images/explore_airpods_5_out__elly16h5teie_xlarge_2x-removebg-preview.png" alt="AirPods 5" />
+          <h3>AirPods 5</h3>
+          <p class="price">From ₹14,900</p>
+          <span class="btn btn-blue">Explore</span>
+        </a>
+        <a href="airpods-5-wireless.html" class="model-panel reveal">
+          <img class="product-thumb" src="assets/images/case-wireless.jpg" alt="AirPods 5 with Wireless Charging Case" />
+          <h3>AirPods 5 + Wireless</h3>
+          <p class="price">From ₹17,900</p>
+          <span class="btn btn-blue">Explore</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAKE A CLOSER LOOK (Split-Scroll, 4 beats) ============ -->
+  <section class="split-scroll" id="closer-look" data-split-section>
+    <div class="split-stage">
+      <div class="split-copy">
+        <!-- Beat 1 -->
+        <div class="beat" data-beat="0">
+          <span class="eyebrow">Design</span>
+          <h2>Take a closer look.</h2>
+          <p>AirPods 5 feature a contoured design for all-day comfort, with a shorter stem and softer touch.</p>
+        </div>
+        <!-- Beat 2 -->
+        <div class="beat" data-beat="1">
+          <span class="eyebrow">Sound</span>
+          <h2>Hear more.<br/>Hear better.</h2>
+          <p>The H2 chip drives richer audio, Adaptive EQ, and up to 1.5x more Active Noise Cancellation.</p>
+        </div>
+        <!-- Beat 3 -->
+        <div class="beat" data-beat="2">
+          <span class="eyebrow">Spatial Audio</span>
+          <h2>Sound around you.</h2>
+          <p>Personalised Spatial Audio with dynamic head tracking places sound all around you.</p>
+        </div>
+        <!-- Beat 4 -->
+        <div class="beat" data-beat="3">
+          <span class="eyebrow">Battery</span>
+          <h2>All day,<br/>every day.</h2>
+          <p>Up to 4 hours with ANC, or up to 5 with Wireless Charging Case. A quick 5-minute charge gives you about an hour.</p>
+        </div>
+      </div>
+      <div class="split-art">
+        <img class="blend-screen" src="assets/images/bento_pair__c7i9mu5k2zee_xlarge_2x.png" alt="Two AirPods 5 side by side" data-split-product draggable="false" />
+      </div>
+      <div class="beat-progress" data-beat-progress aria-hidden="true">
+        <span data-dot="0" class="active"></span>
+        <span data-dot="1"></span>
+        <span data-dot="2"></span>
+        <span data-dot="3"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GET THE HIGHLIGHTS (Expanding, auto-cycling tabs) ============ -->
+  <section class="highlights-section section" id="highlights">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Highlights</span>
+        <h2 style="font-size:clamp(28px,4.6vw,48px);letter-spacing:-.03em;font-weight:700;margin-top:10px">Get the highlights.</h2>
+      </div>
+    </div>
+    <div class="highlights-rail" id="highlightsRail" role="tablist">
+      <div class="highlight-card highlight-card-photo active" role="button" tabindex="0" aria-selected="true">
+        <img src="assets/images/lifestyle-anc.jpg" alt="" />
+        <div class="highlight-copy">
+          <span class="highlight-index" aria-hidden="true">01</span>
+          <h4>Active Noise Cancellation</h4>
+          <p class="tease">Up to 1.5x more noise blocked than the previous generation.</p>
+          <p class="detail">The H2 chip analyzes and cancels background noise in real time — up to 1.5x more than AirPods 4 — so voices stay crisp in a busy café or on a noisy commute.</p>
+          <span class="highlight-more" style="display:none">More ↓</span>
+        </div>
+      </div>
+      <div class="highlight-card" role="button" tabindex="0" aria-selected="false">
+        <div class="highlight-copy">
+          <span class="highlight-index" aria-hidden="true">02</span>
+          <h4>Adaptive Audio</h4>
+          <p class="tease">Sound that adjusts to your environment in real time.</p>
+          <p class="detail">Adaptive Audio blends ANC and Transparency seamlessly, adjusting the level of noise you hear based on what's around you — no fiddling with controls.</p>
+          <span class="highlight-more" style="display:none">More ↓</span>
+        </div>
+      </div>
+      <div class="highlight-card" role="button" tabindex="0" aria-selected="false">
+        <div class="highlight-copy">
+          <span class="highlight-index" aria-hidden="true">03</span>
+          <h4>Conversation Awareness</h4>
+          <p class="tease">Automatically lowers media and focuses voices when you speak.</p>
+          <p class="detail">Start talking and your AirPods lower the media and focus on the voices in front of you — so you can chat without taking them out.</p>
+          <span class="highlight-more" style="display:none">More ↓</span>
+        </div>
+      </div>
+      <div class="highlight-card highlight-card-photo" role="button" tabindex="0" aria-selected="false">
+        <img src="assets/images/battery_case__e74v6o9y3mie_large_2x.png" alt="" />
+        <div class="highlight-copy">
+          <span class="highlight-index" aria-hidden="true">04</span>
+          <h4>Wireless charging</h4>
+          <p class="tease">Charge with USB-C, an Apple Watch charger, or a Qi-certified charger.</p>
+          <p class="detail">The Wireless Charging Case works with USB-C, an Apple Watch charger, or any Qi-certified charger — your case tops up wherever you happen to be.</p>
+          <span class="highlight-more" style="display:none">More ↓</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <button id="galleryPrev" aria-label="Previous highlight">←</button>
+      <button id="galleryNext" aria-label="Next highlight">→</button>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO POLICY ============ -->
+  <section class="video-section section" id="video">
+    <div class="section-head reveal">
+      <span class="eyebrow">Watch</span>
+      <h2>Introducing AirPods&nbsp;5</h2>
+      <p>Watch the official introduction on YouTube.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-slot reveal" data-video="ZldS1ZXpPHE" data-autoplay="muted" role="button" tabindex="0" aria-label="Watch AirPods 5 official video on YouTube">
+        <div class="play">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" fill="currentColor"/></svg>
+        </div>
+        <p>Watch AirPods 5 on YouTube</p>
+        <small>Official video · Apple</small>
+        <span class="official">YouTube · @Apple</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON PANEL ============ -->
+  <section class="compare-section section" id="compare">
+    <div class="section-head reveal">
+      <span class="eyebrow">Compare</span>
+      <h2>Which AirPods&nbsp;5 are&nbsp;right for&nbsp;you?</h2>
+    </div>
+    <div class="compare-panels">
+      <div class="model-panel reveal">
+        <img class="product-thumb blend-screen" src="assets/images/explore_airpods_5_in__gadkl3bf562y_xlarge_2x.png" alt="AirPods 5" />
+        <h3>AirPods 5</h3>
+        <p class="price">From ₹14,900</p>
+        <p style="font-size:14px;color:var(--gray-400);margin:12px 0 20px">Up to 4 hrs listening · USB-C charging</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a href="airpods-5.html" class="btn btn-ghost" style="font-size:14px;padding:10px 20px;border-color:rgba(255,255,255,.2)">Explore</a>
+          <a href="https://www.apple.com/in/shop/buy-airpods/airpods-5/without-wireless-charging-case" target="_blank" rel="noopener" class="btn btn-blue" style="font-size:14px;padding:10px 20px">Buy</a>
+        </div>
+      </div>
+      <div class="model-panel reveal">
+        <img class="product-thumb blend-screen" src="assets/images/battery_case__e74v6o9y3mie_large_2x.png" alt="AirPods 5 with Wireless Charging Case" />
+        <h3>AirPods 5 + Wireless</h3>
+        <p class="price">From ₹17,900</p>
+        <p style="font-size:14px;color:var(--gray-400);margin:12px 0 20px">Up to 5 hrs listening · USB-C, Apple Watch, Qi</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a href="airpods-5-wireless.html" class="btn btn-ghost" style="font-size:14px;padding:10px 20px;border-color:rgba(255,255,255,.2)">Explore</a>
+          <a href="https://www.apple.com/in/shop/buy-airpods/airpods-5/with-wireless-charging-case" target="_blank" rel="noopener" class="btn btn-blue" style="font-size:14px;padding:10px 20px">Buy</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="compare.html" style="color:var(--accent-bright);font-size:15px">See full comparison →</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h6>Models</h6>
+        <a href="airpods-5.html">AirPods 5</a>
+        <a href="airpods-5-wireless.html">AirPods 5 + Wireless Charging Case</a>
+        <a href="compare.html">Compare</a>
+      </div>
+      <div class="footer-col">
+        <h6>Apple India</h6>
+        <a href="https://www.apple.com/in/airpods/" target="_blank" rel="noopener">AirPods on apple.com/in</a>
+        <a href="https://www.apple.com/in/shop/buy-airpods/airpods-5/without-wireless-charging-case" target="_blank" rel="noopener">Buy AirPods</a>
+      </div>
+      <div class="footer-col">
+        <h6>Legal</h6>
+        <button class="license-toggle" id="licenseToggle" aria-expanded="false">Show license (MIT)</button>
+      </div>
+      <div class="footer-col">
+        <h6>About</h6>
+        <p style="color:var(--gray-500);font-size:12px">Concept demo · Not affiliated with Apple</p>
+      </div>
+    </div>
+    <div class="license-panel" id="licensePanel" aria-hidden="true">
+      <pre>MIT License
+
+Copyright (c) 2026 AirPods 5 Demo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+    </div>
+    <div class="footer-legal">
+      <span>AirPods 5 is a product of Apple Inc. This is an independent concept demo for educational purposes only.</span>
+      <span>MIT Licensed · Not affiliated with Apple</span>
+    </div>
+  </footer>
+
+  <!-- Motion for JS as UMD. Loaded via a plain <script> tag instead of an ES
+       module import: when the page is opened from file://, browsers block
+       cross-origin module imports, which silently kills the whole script. The
+       UMD build sets window.Motion and works fine on file://. -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
+  <script>
+    // Wait for DOM
+    document.addEventListener("DOMContentLoaded", () => {
+      // Alias the UMD global so the animation calls below stay terse.
+      const { animate, scroll, inView } = window.Motion || {};
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      /* ---------- Hero entrance ---------- */
+      if (!prefersReduced) {
+        animate("[data-motion-copy]", { opacity: [0, 1], y: [30, 0] }, { duration: 0.8, delay: 0.2, easing: "ease-out" });
+        animate("[data-motion-hero-art]", { opacity: [0, 1], scale: [0.95, 1] }, { duration: 1, delay: 0.4, easing: "ease-out" });
+      }
+
+      /* ---------- Hero 3D tilt ---------- */
+      const heroArt = document.querySelector("[data-motion-hero-art]");
+      if (heroArt && !prefersReduced) {
+        document.addEventListener("mousemove", (e) => {
+          const { innerWidth: w, innerHeight: h } = window;
+          const rotateY = ((e.clientX / w) - 0.5) * 12;
+          const rotateX = ((e.clientY / h) - 0.5) * -8;
+          heroArt.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        document.addEventListener("mouseleave", () => {
+          heroArt.style.transform = "perspective(800px) rotateX(0) rotateY(0) scale(1)";
+        });
+      }
+
+      /* ---------- Scroll reveals ---------- */
+      if (!prefersReduced) {
+        document.querySelectorAll(".reveal").forEach((el) => {
+          inView(el, () => {
+            animate(el, { opacity: [0.7, 1], y: [14, 0] }, { duration: 0.5, easing: "ease-out" });
+          }, { margin: "-100px" });
+        });
+      }
+
+      /* ---------- Split-scroll section (4 beats + pose) ---------- */
+      const splitSection = document.querySelector("[data-split-section]");
+      if (splitSection && !prefersReduced) {
+        const beats = splitSection.querySelectorAll(".beat");
+        const dots = splitSection.querySelectorAll("[data-dot]");
+        const splitProduct = splitSection.querySelector("[data-split-product]");
+        const total = beats.length;
+
+        // Drive everything from a single 0→1 scroll progress over the pinned
+        // 360vh section. A progress window is normalised per beat.
+        scroll((p) => {
+          const progress = Math.min(Math.max(p, 0), 1);
+
+          // Active beat index (0..total-1)
+          const idx = Math.min(total - 1, Math.floor(progress * total));
+
+          // Crossfade beats: each beat's own sub-progress from 0→1 within its slot
+          beats.forEach((beat, i) => {
+            const local = Math.min(Math.max(progress * total - i, 0), 1);
+            const entering = Math.min(local / 0.15, 1);          // fade in over ~15%
+            const leaving = Math.min((1 - local) / 0.15, 1);      // fade out in last 15%
+            const opacity = i === idx ? Math.max(entering, leaving)
+              : Math.min(entering, leaving);
+            beat.style.opacity = String(opacity);
+            beat.style.transform = `translateY(${(1 - opacity) * 40}px)`;
+          });
+
+          // Product pose interpolation across beats
+          if (splitProduct) {
+            const rot = [0, 6, -6, 12, 0];
+            const sc = [1, 1.04, 1.06, 1.02, 1];
+            const pos = progress * (rot.length - 1);
+            const a = Math.floor(pos);
+            const b = Math.min(rot.length - 1, a + 1);
+            const f = pos - a;
+            const rotate = rot[a] + (rot[b] - rot[a]) * f;
+            const scale = sc[a] + (sc[b] - sc[a]) * f;
+            splitProduct.style.transform = `rotate(${rotate}deg) scale(${scale})`;
+          }
+
+          // Active beat dot
+          dots.forEach((d, i) => d.classList.toggle("active", i === idx));
+        }, { target: splitSection, offset: ["start end", "end start"] });
+      }
+
+      /* ---------- Highlights: expanding tabs that auto-cycle ---------- */
+      const hlRail = document.getElementById("highlightsRail");
+      const hlPrev = document.getElementById("galleryPrev");
+      const hlNext = document.getElementById("galleryNext");
+      if (hlRail && hlNext) {
+        const cards = [...hlRail.querySelectorAll(".highlight-card")];
+        let hlActive = 0, hlTimer = null;
+
+        const hlSet = (i) => {
+          hlActive = (i + cards.length) % cards.length;
+          cards.forEach((c, n) => {
+            const on = n === hlActive;
+            c.classList.toggle("active", on);
+            c.setAttribute("aria-selected", on ? "true" : "false");
+          });
+          // Cycling only when motion is allowed.
+          if (!prefersReduced) {
+            clearInterval(hlTimer);
+            hlTimer = setInterval(() => hlSet(hlActive + 1), 4000);
+          }
+        };
+
+        if (!prefersReduced) {
+          cards.forEach((c, i) => {
+            const pick = () => hlSet(i);
+            c.addEventListener("click", pick);
+            c.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); }
+            });
+          });
+          hlPrev && hlPrev.addEventListener("click", () => hlSet(hlActive - 1));
+          hlNext.addEventListener("click", () => hlSet(hlActive + 1));
+          hlSet(0);
+        }
+      }
+
+      // Mobile menu, license panel, gallery controls and video slots are
+      // handled in assets/app.js (loaded below) — shared across all pages.
+
+      console.log("%cAirPods 5 demo — Motion.js live", "color:#2997ff;font-weight:bold;font-size:12px");
+    });
+  </script>
+
+  <!-- GSAP for detail pages (loaded but only used by them) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Draggable.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -139,7 +139,6 @@
           <h4>Active Noise Cancellation</h4>
           <p class="tease">Up to 1.5x more noise blocked than the previous generation.</p>
           <p class="detail">The H2 chip analyzes and cancels background noise in real time — up to 1.5x more than AirPods 4 — so voices stay crisp in a busy café or on a noisy commute.</p>
-          <span class="highlight-more" style="display:none">More ↓</span>
         </div>
       </div>
       <div class="highlight-card" role="button" tabindex="0" aria-selected="false">
@@ -148,7 +147,6 @@
           <h4>Adaptive Audio</h4>
           <p class="tease">Sound that adjusts to your environment in real time.</p>
           <p class="detail">Adaptive Audio blends ANC and Transparency seamlessly, adjusting the level of noise you hear based on what's around you — no fiddling with controls.</p>
-          <span class="highlight-more" style="display:none">More ↓</span>
         </div>
       </div>
       <div class="highlight-card" role="button" tabindex="0" aria-selected="false">
@@ -157,7 +155,6 @@
           <h4>Conversation Awareness</h4>
           <p class="tease">Automatically lowers media and focuses voices when you speak.</p>
           <p class="detail">Start talking and your AirPods lower the media and focus on the voices in front of you — so you can chat without taking them out.</p>
-          <span class="highlight-more" style="display:none">More ↓</span>
         </div>
       </div>
       <div class="highlight-card highlight-card-photo" role="button" tabindex="0" aria-selected="false">
@@ -167,7 +164,6 @@
           <h4>Wireless charging</h4>
           <p class="tease">Charge with USB-C, an Apple Watch charger, or a Qi-certified charger.</p>
           <p class="detail">The Wireless Charging Case works with USB-C, an Apple Watch charger, or any Qi-certified charger — your case tops up wherever you happen to be.</p>
-          <span class="highlight-more" style="display:none">More ↓</span>
         </div>
       </div>
     </div>
@@ -367,46 +363,45 @@ SOFTWARE.</pre>
         }, { target: splitSection, offset: ["start end", "end start"] });
       }
 
-      /* ---------- Highlights: expanding tabs that auto-cycle ---------- */
-      const hlRail = document.getElementById("highlightsRail");
-      const hlPrev = document.getElementById("galleryPrev");
-      const hlNext = document.getElementById("galleryNext");
-      if (hlRail && hlNext) {
-        const cards = [...hlRail.querySelectorAll(".highlight-card")];
-        let hlActive = 0, hlTimer = null;
-
-        const hlSet = (i) => {
-          hlActive = (i + cards.length) % cards.length;
-          cards.forEach((c, n) => {
-            const on = n === hlActive;
-            c.classList.toggle("active", on);
-            c.setAttribute("aria-selected", on ? "true" : "false");
-          });
-          // Cycling only when motion is allowed.
-          if (!prefersReduced) {
-            clearInterval(hlTimer);
-            hlTimer = setInterval(() => hlSet(hlActive + 1), 4000);
-          }
-        };
-
-        if (!prefersReduced) {
-          cards.forEach((c, i) => {
-            const pick = () => hlSet(i);
-            c.addEventListener("click", pick);
-            c.addEventListener("keydown", (e) => {
-              if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); }
-            });
-          });
-          hlPrev && hlPrev.addEventListener("click", () => hlSet(hlActive - 1));
-          hlNext.addEventListener("click", () => hlSet(hlActive + 1));
-          hlSet(0);
-        }
-      }
-
       // Mobile menu, license panel, gallery controls and video slots are
       // handled in assets/app.js (loaded below) — shared across all pages.
 
       console.log("%cAirPods 5 demo — Motion.js live", "color:#2997ff;font-weight:bold;font-size:12px");
+    });
+  </script>
+
+  <!-- Highlights cycling — independent of Motion.js so it works even if the CDN fails -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hlRail = document.getElementById("highlightsRail");
+      const hlPrev = document.getElementById("galleryPrev");
+      const hlNext = document.getElementById("galleryNext");
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!hlRail || !hlNext) return;
+      const cards = [...hlRail.querySelectorAll(".highlight-card")];
+      let hlActive = 0, hlTimer = null;
+
+      function hlSet(i) {
+        hlActive = (i + cards.length) % cards.length;
+        cards.forEach((c, n) => {
+          c.classList.toggle("active", n === hlActive);
+          c.setAttribute("aria-selected", n === hlActive ? "true" : "false");
+        });
+        if (!reduced) {
+          clearInterval(hlTimer);
+          hlTimer = setInterval(() => hlSet(hlActive + 1), 4000);
+        }
+      }
+
+      cards.forEach((c, i) => {
+        c.addEventListener("click", () => hlSet(i));
+        c.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); hlSet(i); }
+        });
+      });
+      if (hlPrev) hlPrev.addEventListener("click", () => hlSet(hlActive - 1));
+      hlNext.addEventListener("click", () => hlSet(hlActive + 1));
+      hlSet(0);
     });
   </script>
 
